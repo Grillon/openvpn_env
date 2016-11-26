@@ -30,3 +30,9 @@ for prg in build-ca build-key-server build-key;do sed -i.old -e 's/--interact//'
 ./build-dh
 #gen clés client
 for client in client1 client2;do ./build-key $client;done
+#partage des clés avec le host
+#ca.crt : certificat racine, il doit être présent sur tt les machines
+#ca.key : il doit rester secret, il ne sera pas copié vers le host -- c'est le seul a resider sur le gestionnaire de clés
+##il y a la clés du serveur,la demande de certificat du serveur et le certificat : nomsrv.key, nomsrv.csr, nomsrv.crt
+##enfin les clés de chaque client
+/vagrant/transfert_keys.sh
