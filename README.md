@@ -1,6 +1,11 @@
 # openvpn_env
 Creation d'un vpn sous vagrant (tuto linuxPratique97 offert au POSS)
 
+## Quickstart
+
+git clone git@github.com:Grillon/openvpn_env.git #This repo
+./start.sh
+
 ## composition
 
 * un serveur de clé
